@@ -8,7 +8,7 @@ OndcReqRouter.post("/select",SelectReq)
 OndcReqRouter.post("/init",InitReq)
 OndcReqRouter.post("/ondcselect",OndcSelectReq)
 OndcReqRouter.post("/ondcinit",ONDCInitReq)
-OndcReqRouter.post("/ondcconfirm",OndcConfirmReq)
+OndcReqRouter.post("/ondcconfirm",OndcConfirmReq);
 OndcReqRouter.post("/cancel",CancelReq)
 OndcReqRouter.get("/search",GETSearchREQ)
 module.exports= OndcReqRouter;
