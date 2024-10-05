@@ -37,6 +37,9 @@ const ConfirmSchema =  mongoose.Schema({
     enum: [true, false],
     default: false,
   },
+  initdata:{
+    type: mongoose.Schema.Types.ObjectId,
+  },
 },{ timestamps: true });
 
 

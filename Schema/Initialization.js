@@ -15,11 +15,7 @@ const InitSchema =  mongoose.Schema(
       type: Boolean,
       enum: [true, false],
       default: false,
-    },
-      initdata:{
-        type: mongoose.Schema.Types.ObjectId,
-      },
-    
+    },    
     transaction_id: { type: String, required: true},
   },
   { timestamps: true }

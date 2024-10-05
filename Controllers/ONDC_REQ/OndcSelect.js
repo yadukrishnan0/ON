@@ -21,7 +21,7 @@ const userobj =await User.findById(user_id);
     return res.status(400).send({ message: "Invalid user_id, user not found" });
   }
 // Fetch the selected item by user or transaction_id
-const selectobj = await Select.findOne({ user: userobj._id });
+const selectobj = await Select.findOne({ user: userobj._id,"context.transaction_id":transaction_id});
 
 if (!selectobj) {
   return res.status(400).send({ Nack: { message: "No item selected for the user" } });

@@ -7,7 +7,7 @@ const Address =require( "../../Schema/Address.js");
 const findObject = async (transaction_id, user_id) => {
   
   const userobj =await User.findById(user_id);
-    const selectObj = await Select.findOne({ user: userobj._id }).lean();
+    const selectObj = await Select.findOne({ user: userobj._id,"context.transaction_id":transaction_id }).lean();
   
     // Validate selectObj
     if (!selectObj) {

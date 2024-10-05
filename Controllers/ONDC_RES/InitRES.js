@@ -43,13 +43,13 @@ const InitRES = async (req, res) => {
             quote: responseOrder.quote,
             payment: responseOrder.payment,
             tags: responseOrder.tags,
-            transaction_id:context.transaction_id
+            transaction_id:context.transaction_id,
+            initdata:message
           });
 
           await onInitData.save();
 
           initData.ONDC_INIT_CALL = true;
-          initData.initdata=message;
           await initData.save(); 
 
           await selectData.save();

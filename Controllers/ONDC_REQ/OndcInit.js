@@ -14,7 +14,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const fetchSelectAndInit = async (transaction_id, user_id) => {
   
   const userobj =await User.findById(user_id);
-  const selectobj = await Select.findOne({ user: user_id });
+const selectobj = await Select.findOne({ user: userobj._id,"context.transaction_id":transaction_id});
 
   if (!selectobj) {
     throw new Error("No item selected for the user.");
