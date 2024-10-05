@@ -16,6 +16,10 @@ const InitSchema =  mongoose.Schema(
       enum: [true, false],
       default: false,
     },
+      initdata:{
+        type: mongoose.Schema.Types.ObjectId,
+      },
+    
     transaction_id: { type: String, required: true},
   },
   { timestamps: true }

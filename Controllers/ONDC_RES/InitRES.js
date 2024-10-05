@@ -49,6 +49,7 @@ const InitRES = async (req, res) => {
           await onInitData.save();
 
           initData.ONDC_INIT_CALL = true;
+          initData.initdata=message;
           await initData.save(); 
 
           await selectData.save();

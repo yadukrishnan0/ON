@@ -44,7 +44,9 @@ const ConfirmRES = async (req, res) => {
         state: message.order.state,
         stateChanges: new Map([[message.order.state, isoTimestamp]]),
         transaction_id: context.transaction_id,
+        confirmdata:message
       });
+      
       await newStatus.save();
     }
     

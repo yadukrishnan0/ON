@@ -36,6 +36,7 @@ const StatusRES = async (req, res) => {
     if (statusObj) {
       statusObj.state = message.order.state;
       statusObj.stateChanges.set(message.order.state, isoTimestamp);  
+      statusObj.canceldata = message.order.state === 'cancel' ? message : undefined;
       await statusObj.save();
     } else {
       const newStatus = new Status({

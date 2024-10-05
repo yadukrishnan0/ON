@@ -57,6 +57,8 @@ const SelectSchema =  mongoose.Schema({
         },
       ],
     },
+  },selectdata:{
+type: mongoose.Schema.Types.Mixed
   },
   ONDC_SELECT_CALL: {
     type: Boolean,

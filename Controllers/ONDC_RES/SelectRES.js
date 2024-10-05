@@ -39,6 +39,7 @@ const SelectRES = async (req, res) => {
           return itm;
         });
         selectData.ONDC_SELECT_CALL=true;
+        selectData.selectdata=message;
         // Save the updated data
         await selectData.save();
     }
