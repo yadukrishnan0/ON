@@ -52,8 +52,6 @@ const InitRES = async (req, res) => {
           initData.ONDC_INIT_CALL = true;
           await initData.save(); 
 
-          await selectData.save();
-
           return res.status(200).json({ message: "Ack" });
         } catch (error) {
           console.error("Error saving OnInit data:", error);
