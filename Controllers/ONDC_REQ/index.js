@@ -5,6 +5,7 @@ const ONDCInitReq =require("./OndcInit.js");
 const OndcSelectReq =require( "./OndcSelect.js");
 const OndcConfirmReq =require( "./OndcConfirm.js");
 const CancelReq =require( "./CancelReq.js");
+const ONDCStatusReq=require('./ONDCStatusReq.js')
 
 
-module.exports={SearchREQ,SelectReq,InitReq,ONDCInitReq,OndcSelectReq,OndcConfirmReq,CancelReq}
+module.exports={SearchREQ,SelectReq,InitReq,ONDCInitReq,OndcSelectReq,OndcConfirmReq,CancelReq,ONDCStatusReq}
